@@ -25,12 +25,15 @@ class Form implements IFormRender {
     switch (this.store.getFormType()) {
       case(ORIGINAL_FORM_TYPE):
         this.originalForm.render();
+        this.addFormEventListeners();
         break;
       case (ACCESSIBILITY_FORM_TYPE):
         this.accessibleForm.render();
+        this.addFormEventListeners();
         break;
       default:
         this.originalForm.render();
+        this.addFormEventListeners();
     }
   }
 
@@ -44,7 +47,7 @@ class Form implements IFormRender {
 
   private addFormEventListeners(): any {
     const formNode = document.querySelector('#example-form') as HTMLElement;
-    const formEventHandler = new FormEventHandler(formNode);
+    const formEventHandler = new FormEventHandler(formNode, this.store);
     console.log('Initialising FormEventHandler');
     formEventHandler.init();
   }

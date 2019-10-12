@@ -47,5 +47,3 @@ class SwitchBtnEventHandler {
 }
 
 export default SwitchBtnEventHandler;
-
-

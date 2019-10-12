@@ -5,8 +5,9 @@ import {
 } from './constantValues';
 
 export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="example-form">
-<h4>${FORM_TITLE}</h4>
-<p>*${FORM_TITLE_ACCESSIBLE} - ${FORM_SUBTITLE}</p>
+<h4 class="form-title">${FORM_TITLE}</h4>
+<p class="form-subtitle">*${FORM_TITLE_ACCESSIBLE} - ${FORM_SUBTITLE}</p>
+<p class="sr-only">To attend a hackathon event, please continue to register.</p>
 <div class="input-field">
   <label class="form-label" for="title">Title</label>
   <select id="title" class="form-input" name="title" required aria-required="true">
@@ -43,11 +44,12 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
   <input type="text" class="form-input" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number" />
 </div>
 
-<fieldset class="input-field" role="radiogroup" tabindex=0 >
+<fieldset class="input-field" tabindex=0 >
   <legend class="form-label">Venue Location</legend>
-  <div class="radio-button-container">
+  <p class="sr-only">Please select the city you would like to attend.</p>
+  <div class="radio-button-container venueLocation-group" role="radiogroup" aria-required="true">
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="sydney" name="venue" value="Sydney" required aria-required="true" />
+      <input type="radio" class="radio-input" id="sydney" name="venue" value="Sydney" required />
       <label class="radio-label" for="sydney">
         <span class="ph-tick"></span>
         Sydney
@@ -68,14 +70,14 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="brisbane" name="venue" value="brisbane"/>
+      <input type="radio" class="radio-input" id="brisbane" name="venue" value="brisbane" />
       <label class="radio-label" for="brisbane">
         <span class="ph-tick"></span>
         Brisbane
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="perth" name="venue" value="perth"/>
+      <input type="radio" class="radio-input" id="perth" name="venue" value="perth" />
       <label class="radio-label" for="perth">
         <span class="ph-tick"></span>
         Perth
@@ -96,10 +98,10 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
   <textarea class="form-input-textarea" id="tellus" name="tellus" row = "10" placeholder="Go for it..."></textarea>
 </div>
 
-<fieldset class="input-field">
+<fieldset class="input-field" tabindex=0>
   <legend class="checkbox-title">Subscribe to our news letter</legend>
-  <div class="checkbox-group" tabindex=0>
-    <input type="checkbox" class="radio-input" id="subscribe" name="subscribe"/>
+  <div class="checkbox-group">
+    <input type="checkbox" class="checkbox-input checkbox-input-ac" id="subscribe" name="subscribe" aria-checked="false"/>
     <label class="radio-label" for="subscribe">
       <span class="ph-tick"></span>
       Subscribe

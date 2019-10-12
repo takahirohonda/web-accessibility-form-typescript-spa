@@ -5,11 +5,11 @@ import {
 } from './constantValues';
 
 export const ORIGINAL_FORM_HTML = `<form class="example-form" id="example-form">
-  <h4>${FORM_TITLE}</h4>
-  <p>*${FORM_TITLE_ORIGINAL} - ${FORM_SUBTITLE}</p>
+  <h4 class="form-title">${FORM_TITLE}</h4>
+  <p class="form-subtitle">*${FORM_TITLE_ORIGINAL} - ${FORM_SUBTITLE}</p>
   <div class="input-field">
     <label class="form-label" for="title">Title</label>
-    <select id="title" class="form-input" name="title">
+    <select id="title" class="form-input" name="title" required>
       <optgroup>
       <option value="">Select your title</option>
       </optgroup>
@@ -25,64 +25,64 @@ export const ORIGINAL_FORM_HTML = `<form class="example-form" id="example-form">
 
   <div class="input-field">
     <label class="form-label" for="firstname">First name</label>
-    <input type="text" class="form-input" id="firstname" name="firstname" placeholder="Your first name" />
+    <input type="text" class="form-input" id="firstname" name="firstname" placeholder="Your first name" required />
   </div>
 
   <div class="input-field">
     <label class="form-label" for="lastname">Last name</label>
-    <input type="text" class="form-input" id="lastname" name="lastname" placeholder="Your last name" />
+    <input type="text" class="form-input" id="lastname" name="lastname" placeholder="Your last name" required />
   </div>
 
   <div class="input-field">
     <label class="form-label" for="email">Email</label>
-    <input type="email" class="form-input" id="email" name="email" placeholder="Your email" />
+    <input type="email" class="form-input" id="email" name="email" placeholder="Your email" required />
   </div>
 
   <div class="input-field">
     <label class="form-label" for="phone">Phone</label>
-    <input type="text" class="form-input" id="phone" name="phone" placeholder="Your phone number" />
+    <input type="text" class="form-input" id="phone" name="phone" placeholder="Your phone number" required />
   </div>
 
   <div class="input-field">
     <label class="form-label">Venue Location</label>
-    <div class="radio-button-container">
+    <div class="radio-button-container venueLocation-group">
       <div class="radio-button-group">
-        <input type="radio" class="radio-input" id="sydney" name="venue" value="Sydney" />
+        <input type="radio" class="radio-input radio-input-ac" id="sydney" name="venue" value="Sydney" aria-checked="false" required />
         <label class="radio-label" for="sydney">
           <span class="ph-tick"></span>
           Sydney
         </label>
       </div>
       <div class="radio-button-group">
-        <input type="radio" class="radio-input" id="melbourne" name="venue" value="melbourne" />
+        <input type="radio" class="radio-input radio-input-ac" id="melbourne" name="venue" value="melbourne" aria-checked="false" />
         <label class="radio-label" for="melbourne">
           <span class="ph-tick"></span>
           Melbourne
         </label>
       </div>
       <div class="radio-button-group">
-        <input type="radio" class="radio-input" id="adelaide" name="venue" value="adelaide" />
+        <input type="radio" class="radio-input radio-input-ac" id="adelaide" name="venue" value="adelaide" aria-checked="false" />
         <label class="radio-label" for="adelaide">
           <span class="ph-tick"></span>
           Adelaide
         </label>
       </div>
       <div class="radio-button-group">
-        <input type="radio" class="radio-input" id="brisbane" name="venue" value="brisbane" />
+        <input type="radio" class="radio-input radio-input-ac" id="brisbane" name="venue" value="brisbane" aria-checked="false" />
         <label class="radio-label" for="brisbane">
           <span class="ph-tick"></span>
           Brisbane
         </label>
       </div>
       <div class="radio-button-group">
-        <input type="radio" class="radio-input" id="perth" name="venue" value="perth" />
+        <input type="radio" class="radio-input radio-input-ac" id="perth" name="venue" value="perth" aria-checked="false" />
         <label class="radio-label" for="perth">
           <span class="ph-tick"></span>
           Perth
         </label>
       </div>
       <div class="radio-button-group">
-        <input type="radio" class="radio-input" id="goldcoast" name="venue" value="goldcoast" />
+        <input type="radio" class="radio-input radio-input-ac" id="goldcoast" name="venue" value="goldcoast" aria-checked="false" />
         <label class="radio-label" for="goldcoast">
           <span class="ph-tick"></span>
           Gold Coast
@@ -106,5 +106,5 @@ export const ORIGINAL_FORM_HTML = `<form class="example-form" id="example-form">
       </label>
     </div>
   </div>
-  <button type="button" class="submit-btn">Submit</button>
+  <button type="submit" class="submit-btn">Submit</button>
 </form>`;

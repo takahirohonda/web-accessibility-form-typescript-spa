@@ -1,26 +1,37 @@
-import { IStoreData } from '../types/customTypes';
+import { IStoreData, IFormModel } from '../types/models';
 import { IStore } from '../types/interfaces';
-import {
-  ORIGINAL_FORM_TYPE,
-  ACCESSIBILITY_FORM_TYPE
-} from '../constants/constantValues';
+import { initialState } from '../store/initialState';
 
 class Store implements IStore {
   private state: IStoreData;
-  private initialState: IStoreData = {
-    formType: ORIGINAL_FORM_TYPE
-  };
+  private initialState: IStoreData = initialState;
 
   constructor() {
     this.state = this.initialState;
   }
 
-  updateFormType(formType: string): void {
+  public updateFormType(formType: string): void {
     this.state.formType = formType;
   }
 
-  getFormType(): string {
+  public getFormType(): string {
     return this.state.formType;
+  }
+
+  public updateFormData(formData: IFormModel): void {
+    this.state.formData = formData;
+  }
+
+  public getFormData(): IFormModel {
+    return this.state.formData;
+  }
+
+  public updateFormSubmitted(submitted: boolean): void {
+    this.state.formSubmitted = submitted;
+  }
+
+  public getFormSubmitted(): boolean {
+    return this.state.formSubmitted;
   }
 
 }

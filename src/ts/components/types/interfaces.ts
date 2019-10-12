@@ -1,8 +1,12 @@
-import { IStoreData } from './customTypes';
+import { IStoreData, IFormModel } from './models';
 
 export interface IStore {
   updateFormType(formType: string): void;
   getFormType(): string;
+  updateFormData(formData: IFormModel): void;
+  getFormData(): IFormModel;
+  updateFormSubmitted(submitted: boolean): void;
+  getFormSubmitted(): boolean;
 }
 
 export interface IFormUi {
@@ -15,5 +19,9 @@ export interface IFormRender {
 }
 
 export interface IEventHandler {
+  init(): void;
+}
+
+export interface ISubmitHandler {
   init(): void;
 }
