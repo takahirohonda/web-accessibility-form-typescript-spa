@@ -29,3 +29,4 @@ The final product can be seen at [Accessibility Web Form Example](https://mydata
 Related blog posts:
 
 - [Creating a Form for Screen Reader Accessibility](https://www.mydatahack.com/creating-a-form-for-screen-reader-accessibility/)
+- [Unit Testing Event Listeners on Form Input Fields with Karma](https://www.mydatahack.com/unit-testing-event-listeners-on-form-input-fields-with-karma/)

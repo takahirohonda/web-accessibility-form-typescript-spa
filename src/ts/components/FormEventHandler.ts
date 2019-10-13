@@ -1,6 +1,4 @@
 import { IEventHandler, ISubmitHandler } from './types/interfaces';
-import SelectEventHandler from './SelectEventHandler';
-import SubmitHandler from './SubmitHandler';
 
 class FormEventHandler implements IEventHandler {
 
@@ -23,11 +21,9 @@ class FormEventHandler implements IEventHandler {
     this.submitHandler.init();
   }
 
-
   private radioInputHandler(): void {
     const radioInputElements = this.formElement.querySelectorAll('.radio-input-ac');
     this.addEventListenerForAriaCheckedRadio(radioInputElements);
-
   }
 
   private checkboxInputHandler(): void {
