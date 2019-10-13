@@ -1,6 +1,6 @@
 # web-accessibility-form-typescript-spa
 
-Example of web accessibility form - SPA with TypeScript
+Example of web accessibility form for screen reader - SPA with TypeScript
 
 It includes examples for creating TypeScript SPA with unit tests with Karama.
 
