@@ -25,3 +25,7 @@ export interface IEventHandler {
 export interface ISubmitHandler {
   init(): void;
 }
+
+export interface IEventHandlerInitializer {
+  init(element: HTMLElement): void;
+}

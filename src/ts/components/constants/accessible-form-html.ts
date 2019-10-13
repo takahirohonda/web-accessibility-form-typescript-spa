@@ -10,7 +10,7 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
 <p class="sr-only">To attend a hackathon event, please continue to register.</p>
 <div class="input-field">
   <label class="form-label" for="title">Title</label>
-  <select id="title" class="form-input" name="title" required aria-required="true">
+  <select id="title" class="form-input required-input-field" name="title" required aria-required="true">
     <optgroup>
     <option value="">Select your title</option>
     </optgroup>
@@ -26,22 +26,22 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
 
 <div class="input-field">
   <label class="form-label" for="firstname">First name</label>
-  <input type="text" class="form-input" id="firstname" name="firstname" required aria-required="true" placeholder="Enter your first name" />
+  <input type="text" class="form-input required-input-field" id="firstname" name="firstname" required aria-required="true" placeholder="Enter your first name" />
 </div>
 
 <div class="input-field">
   <label class="form-label" for="lastname">Last name</label>
-  <input type="text" class="form-input" id="lastname" name="lastname" required aria-required="true" placeholder="Enter your last name" />
+  <input type="text" class="form-input required-input-field" id="lastname" name="lastname" required aria-required="true" placeholder="Enter your last name" />
 </div>
 
 <div class="input-field">
   <label class="form-label" for="email">Email</label>
-  <input type="email" class="form-input" id="email" name="email" required aria-required="true" placeholder="Enter your email" />
+  <input type="email" class="form-input required-input-field" id="email" name="email" required aria-required="true" placeholder="Enter your email" />
 </div>
 
 <div class="input-field">
   <label class="form-label" for="phone">Phone</label>
-  <input type="text" class="form-input" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number" />
+  <input type="text" class="form-input required-input-field" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number" />
 </div>
 
 <fieldset class="input-field" tabindex=0 >
@@ -100,8 +100,8 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
 
 <fieldset class="input-field" tabindex=0>
   <legend class="checkbox-title">Subscribe to our news letter</legend>
-  <div class="checkbox-group">
-    <input type="checkbox" class="checkbox-input checkbox-input-ac" id="subscribe" name="subscribe" aria-checked="false"/>
+  <div class="checkbox-group" tabindex=0>
+    <input type="checkbox" class="checkbox-input" id="subscribe" name="subscribe" />
     <label class="radio-label" for="subscribe">
       <span class="ph-tick"></span>
       Subscribe

@@ -9,7 +9,7 @@ export const ORIGINAL_FORM_HTML = `<form class="example-form" id="example-form">
   <p class="form-subtitle">*${FORM_TITLE_ORIGINAL} - ${FORM_SUBTITLE}</p>
   <div class="input-field">
     <label class="form-label" for="title">Title</label>
-    <select id="title" class="form-input" name="title" required>
+    <select id="title" class="form-input required-input-field" name="title" required>
       <optgroup>
       <option value="">Select your title</option>
       </optgroup>
@@ -25,22 +25,22 @@ export const ORIGINAL_FORM_HTML = `<form class="example-form" id="example-form">
 
   <div class="input-field">
     <label class="form-label" for="firstname">First name</label>
-    <input type="text" class="form-input" id="firstname" name="firstname" placeholder="Your first name" required />
+    <input type="text" class="form-input required-input-field" id="firstname" name="firstname" placeholder="Your first name" required />
   </div>
 
   <div class="input-field">
     <label class="form-label" for="lastname">Last name</label>
-    <input type="text" class="form-input" id="lastname" name="lastname" placeholder="Your last name" required />
+    <input type="text" class="form-input required-input-field" id="lastname" name="lastname" placeholder="Your last name" required />
   </div>
 
   <div class="input-field">
     <label class="form-label" for="email">Email</label>
-    <input type="email" class="form-input" id="email" name="email" placeholder="Your email" required />
+    <input type="email" class="form-input required-input-field" id="email" name="email" placeholder="Your email" required />
   </div>
 
   <div class="input-field">
     <label class="form-label" for="phone">Phone</label>
-    <input type="text" class="form-input" id="phone" name="phone" placeholder="Your phone number" required />
+    <input type="text" class="form-input required-input-field" id="phone" name="phone" placeholder="Your phone number" required />
   </div>
 
   <div class="input-field">

@@ -1,4 +1,4 @@
-import { IEventHandler, IStore, ISubmitHandler } from './types/interfaces';
+import { IEventHandler, ISubmitHandler } from './types/interfaces';
 import SelectEventHandler from './SelectEventHandler';
 import SubmitHandler from './SubmitHandler';
 
@@ -7,16 +7,16 @@ class FormEventHandler implements IEventHandler {
   private formElement: HTMLElement;
   private selectEventHandler: IEventHandler;
   private submitHandler: ISubmitHandler;
-  private store: IStore;
 
-  constructor(formElement: HTMLElement, store: IStore) {
+  constructor(formElement: HTMLElement,
+    selectEventHandler: IEventHandler,
+    submitHandler: ISubmitHandler) {
     this.formElement = formElement;
-    this.selectEventHandler = new SelectEventHandler(this.formElement);
-    this.store = store;
-    this.submitHandler = new SubmitHandler(formElement, this.store);
+    this.selectEventHandler = selectEventHandler;
+    this.submitHandler = submitHandler;
   }
 
-  init(): void {
+  public init(): void {
     this.selectEventHandler.init();
     this.radioInputHandler();
     this.checkboxInputHandler();

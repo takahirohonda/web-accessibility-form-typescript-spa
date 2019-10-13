@@ -9,7 +9,7 @@ class AccessibleForm implements IFormUi {
     this.target = target;
   }
 
-  render(): void {
+  public render(): void {
     this.target.insertAdjacentHTML('afterend', ACCESIBLE_FORM_HTML);
   }
 }

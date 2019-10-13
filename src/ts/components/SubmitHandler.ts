@@ -19,14 +19,12 @@ class SubmitHandler implements ISubmitHandler {
       e.preventDefault();
       this.handleSubmit();
       const formData = this.store.getFormData();
-      console.log(this.store.getFormData());
+      // console.log(this.store.getFormData());
 
       const error = this.validateFieldsAndIndicateErrorInput(formData);
       this.addErrorMessage(error);
 
       // Todo: extract this to function
-      const yPosition = (this.formElement.querySelector('.form-title') as HTMLElement).offsetTop;
-      console.log(yPosition);
       (this.formElement.querySelector('.form-title') as HTMLElement).scrollIntoView(true);
 
       if (!error) {
@@ -40,8 +38,7 @@ class SubmitHandler implements ISubmitHandler {
         Phone: ${formData.phone}
         Venue Location: ${formData.venueLocation}
         Tell us about yourself: ${formData.aboutYourself}
-        Subscribed: ${formData.subscribe ? 'Yes' : 'No'}
-        `;
+        Subscribed: ${formData.subscribe ? 'Yes' : 'No'}`;
         const confirmClosed = window.confirm(message);
         if (confirmClosed) {
           this.clearForm();
@@ -51,7 +48,7 @@ class SubmitHandler implements ISubmitHandler {
 
     // Input field on click handler
     // Todo: this is a quick hack and not efficient. It needs to be refactored.
-    const inputElements = this.formElement.querySelectorAll('.input-field') as any;
+    const inputElements = this.formElement.querySelectorAll('.required-input-field') as any;
     for (let element of inputElements) {
       element.addEventListener('change', (e: Event) => {
         if (this.formElement.querySelector('.required-error-msg')) {

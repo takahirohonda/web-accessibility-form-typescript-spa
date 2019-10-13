@@ -8,25 +8,20 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['jasmine', 'fixture', 'viewport'],
     files: [
-      // vendor libs have to be in specific order
-      { pattern: 'src/scripts/vendor/jquery-3.4.1.min.js', watched: false, },
-      { pattern: 'src/scripts/vendor/popper.min.js', watched: false, },
-      { pattern: 'src/scripts/vendor/bootstrap.min.js', watched: false, },
-      { pattern: 'src/scripts/page-specific/*.js', watched: false, },
       // Adding test target files
-      'src/scripts/custom/**/*.js',
-      'test/**/*.spec.js',
+      { pattern: 'src/**/main.min.js', watched: false, },
+      'src/**/*.spec.ts',
       // Adding style and images
       { pattern: 'dist/img/**/*.*', served: true, included: false, watched: false },
-      { pattern: 'dist/style/*.css' },
+      { pattern: 'dist/css/*.*.css' },
       // Adding fixture html for karma-fixture
       { pattern: 'test/fixtures/**/*.html', served: true, included: false, watched: false, }
     ],
     preprocessors: {
-      'test/**/*.spec.ts': ['webpack'],
+      'src/**/*.spec.ts': ['webpack'],
       // for karma-fixture not working
-      'test/fixtures/**/*.html'   : ['html2js'],
-      'test/fixtures/**/*.json'   : ['json_fixtures']
+      'src/**/fixtures/**/*.html'   : ['html2js'],
+      'src/**/fixtures/**/*.json'   : ['json_fixtures']
     },
     // for karma-fixture
     jsonFixturesPreprocessor: {

@@ -1,7 +1,4 @@
 
-import OriginalForm from './OriginalForm';
-import AccessibleForm from './AccessibleForm';
-import FormEventHandler from './FormEventHandler';
 import { IStore, IFormUi, IFormRender } from './types/interfaces';
 import {
   ORIGINAL_FORM_TYPE,
@@ -14,10 +11,10 @@ class Form implements IFormRender {
   private accessibleForm: IFormUi;
   private originalForm: IFormUi;
 
-  constructor (store: IStore, target: HTMLElement) {
+  constructor (store: IStore, accessibleForm: IFormUi, originalForm: IFormUi) {
     this.store = store;
-    this.accessibleForm = new AccessibleForm(target);
-    this.originalForm = new OriginalForm(target);
+    this.accessibleForm = accessibleForm;
+    this.originalForm = originalForm;
   }
 
   public render(): void {
@@ -25,15 +22,12 @@ class Form implements IFormRender {
     switch (this.store.getFormType()) {
       case(ORIGINAL_FORM_TYPE):
         this.originalForm.render();
-        this.addFormEventListeners();
         break;
       case (ACCESSIBILITY_FORM_TYPE):
         this.accessibleForm.render();
-        this.addFormEventListeners();
         break;
       default:
         this.originalForm.render();
-        this.addFormEventListeners();
     }
   }
 
@@ -43,13 +37,6 @@ class Form implements IFormRender {
       formNode.remove();
     }
     this.render();
-  }
-
-  private addFormEventListeners(): any {
-    const formNode = document.querySelector('#example-form') as HTMLElement;
-    const formEventHandler = new FormEventHandler(formNode, this.store);
-    console.log('Initialising FormEventHandler');
-    formEventHandler.init();
   }
 }
 
