@@ -8,6 +8,20 @@ It includes examples for creating TypeScript SPA with unit tests with Karama.
 - TypeScript SPA with Gulp build
 - Unit tests with Karma for forms event listeners & rendering logic
 
+### Get started
+
+Start app
+```bash
+npm i
+npm run prod:deploy
+npm run watch
+```
+
+Run test
+```bash
+npm run test:watch
+```
+
 ### Related links
 
 The final product can be seen at [Accessibility Web Form Example](https://mydatahack.github.io/accessibility-form/)
