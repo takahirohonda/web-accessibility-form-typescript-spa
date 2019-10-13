@@ -5,9 +5,6 @@ import AccessibleForm from './components/AccessibleForm';
 import Form from './components/form';
 import Store from './components/store/store';
 import SwitchBtnEventHandler from './components/SwitchBtnEventHandler';
-import SelectEventHandler from './components/SelectEventHandler';
-import SubmitHandler from './components/SubmitHandler';
-import FormEventHandler from './components/FormEventHandler';
 import EventHandlerInitializer from './components/EventHandlerInitializer';
 
 document.addEventListener('DOMContentLoaded', () => {
