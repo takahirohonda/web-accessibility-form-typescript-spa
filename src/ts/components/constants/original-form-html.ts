@@ -99,7 +99,7 @@ export const ORIGINAL_FORM_HTML = `<form class="example-form" id="example-form">
   <div class="input-field">
     <p class="checkbox-title">Subscribe to our news letter</p>
     <div class="checkbox-group">
-      <input type="checkbox" class="radio-input" id="subscribe" name="subscribe"/>
+      <input type="checkbox" class="radio-input sr-only" id="subscribe" name="subscribe"/>
       <label class="radio-label" for="subscribe">
         <span class="ph-tick"></span>
         Subscribe

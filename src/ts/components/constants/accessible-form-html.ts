@@ -49,42 +49,42 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
   <p class="sr-only">Please select the city you would like to attend.</p>
   <div class="radio-button-container venueLocation-group" role="radiogroup" aria-required="true">
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="sydney" name="venue" value="Sydney" required />
+      <input type="radio" class="radio-input sr-only" id="sydney" name="venue" value="Sydney" required />
       <label class="radio-label" for="sydney">
         <span class="ph-tick"></span>
         Sydney
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="melbourne" name="venue" value="melbourne" />
+      <input type="radio" class="radio-input sr-only" id="melbourne" name="venue" value="melbourne" />
       <label class="radio-label" for="melbourne">
         <span class="ph-tick"></span>
         Melbourne
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="adelaide" name="venue" value="adelaide" />
+      <input type="radio" class="radio-input sr-only" id="adelaide" name="venue" value="adelaide" />
       <label class="radio-label" for="adelaide">
         <span class="ph-tick"></span>
         Adelaide
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="brisbane" name="venue" value="brisbane" />
+      <input type="radio" class="radio-input sr-only" id="brisbane" name="venue" value="brisbane" />
       <label class="radio-label" for="brisbane">
         <span class="ph-tick"></span>
         Brisbane
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="perth" name="venue" value="perth" />
+      <input type="radio" class="radio-input sr-only" id="perth" name="venue" value="perth" />
       <label class="radio-label" for="perth">
         <span class="ph-tick"></span>
         Perth
       </label>
     </div>
     <div class="radio-button-group" tabindex=0>
-      <input type="radio" class="radio-input" id="goldcoast" name="venue" value="goldcoast" />
+      <input type="radio" class="radio-input sr-only" id="goldcoast" name="venue" value="goldcoast" />
       <label class="radio-label" for="goldcoast">
         <span class="ph-tick"></span>
         Gold Coast
@@ -101,7 +101,7 @@ export const ACCESIBLE_FORM_HTML = `<form class="example-form-accessible" id="ex
 <fieldset class="input-field" tabindex=0>
   <legend class="checkbox-title">Subscribe to our news letter</legend>
   <div class="checkbox-group" tabindex=0>
-    <input type="checkbox" class="checkbox-input" id="subscribe" name="subscribe" />
+    <input type="checkbox" class="checkbox-input sr-only" id="subscribe" name="subscribe" />
     <label class="radio-label" for="subscribe">
       <span class="ph-tick"></span>
       Subscribe

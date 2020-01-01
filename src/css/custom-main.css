@@ -203,12 +203,20 @@ legend {
   margin: 5px 10px;
 }
 
-.radio-button-group:focus {
-  outline: none;
+
+.radio-input-ac {
+  display: none; /* Not a good example to make input field display none */
 }
 
-input[type=radio] {
-  display: none;
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .radio-label {
@@ -255,17 +263,10 @@ select {
   margin: 15px 10px;
 }
 
-.checkbox-group:focus {
-  outline:none;
-}
 .checkbox-title {
   font-weight: 400;
   margin-bottom: 0px;
   margin-top: 10px;
-}
-
-input[type=checkbox] {
-  display: none;
 }
 
 .form-input-textarea {
